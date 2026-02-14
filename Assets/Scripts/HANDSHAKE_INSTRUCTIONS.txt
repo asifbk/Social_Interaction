@@ -1,0 +1,141 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                     HOW TO MAKE AVATARS HANDSHAKE                         ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+🤝 UPDATED: Enhanced handshake system with visual feedback!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        STEP-BY-STEP GUIDE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. START THE GAME
+   • Click the Play button ▶️ in Unity Editor
+   • Wait for the scene to load
+
+2. POSITION THE AVATARS
+   • Use W key to walk one avatar forward
+   • Use ← → arrow keys to rotate and face each other
+   • Move avatars CLOSE together
+
+3. CHECK THE DISTANCE DISPLAY
+   • Look at the TOP LEFT of the Game view
+   • You'll see:
+     "Distance: X.XX units"
+   
+   • When close enough, you'll see:
+     "✓ Close enough! Press H to handshake" (in GREEN)
+   
+   • If too far, you'll see:
+     "✗ Too far! Move closer" (in RED)
+
+4. TRIGGER THE HANDSHAKE
+   • When you see the GREEN message
+   • Press H key
+   • Both avatars will:
+     ✓ Raise their right arms
+     ✓ Extend hands forward
+     ✓ Shake hands up and down
+     ✓ Return to idle after 3.5 seconds
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          WHAT TO EXPECT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HANDSHAKE ANIMATION SEQUENCE:
+
+  0.0 - 0.5s  → Arms raise up smoothly
+  0.5 - 3.0s  → Hands shake up and down vigorously
+  3.0 - 3.5s  → Arms lower back down
+  3.5s        → Return to idle state
+
+VISUAL INDICATORS:
+
+  ✅ Distance Display → Always visible in top-left corner
+  ✅ Color Coded      → Green = ready, Red = too far
+  ✅ Console Logs     → Detailed debug info (check Console window)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM: "Nothing happens when I press H"
+
+SOLUTIONS:
+  1. Check the distance display - are you close enough? (< 3.0 units)
+  2. Make sure you're in Play Mode (not Edit Mode)
+  3. Open Console window (Window → General → Console)
+  4. Press H and check for debug messages
+  5. Look for "Starting handshake!" in the Console
+
+PROBLEM: "Arms don't move during handshake"
+
+SOLUTIONS:
+  1. Check Console for "Arm bones not found!" warning
+  2. If you see this warning, the ProceduralAnimator couldn't find bones
+  3. This should auto-fix on scene start - try restarting Play Mode
+  4. Check Console for "ProceduralAnimator initialized" messages
+  5. Make sure it says "Right Upper Arm: Found" and "Right Lower Arm: Found"
+
+PROBLEM: "I can't get close enough"
+
+SOLUTIONS:
+  1. The required distance is now 3.0 units (was 1.5)
+  2. Use W + Arrow keys to position avatars
+  3. Watch the distance display in real-time
+  4. Face the avatars toward each other
+  5. Walk straight toward the other avatar
+
+PROBLEM: "Handshake happens but looks weird"
+
+EXPECTED BEHAVIOR:
+  • Right arm raises to the side
+  • Elbow bends forward
+  • Hand shakes up and down rapidly
+  • Animation lasts 3.5 seconds
+  • Smooth return to idle
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        DEBUG INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When you press H, the Console will show:
+
+  ═══════════════════════════════════════
+  HANDSHAKE DEBUG INFO:
+  Distance between avatars: X.XX units
+  Avatar 1 position: (x, y, z)
+  Avatar 2 position: (x, y, z)
+  Avatar 1 - IsWalking: False, IsHandshaking: True
+  Avatar 2 - IsWalking: False, IsHandshaking: True
+  ProceduralAnimator 1: Found
+  ProceduralAnimator 2: Found
+  ═══════════════════════════════════════
+
+  Avater 1: Starting handshake animation!
+  Avater 2: Starting handshake animation!
+
+If you see these messages, the handshake is working!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          KEY SETTINGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Changed Settings:
+  ✓ Handshake Distance: 3.0 units (increased from 1.5)
+  ✓ Handshake Duration: 3.5 seconds
+  ✓ Debug Logging: Enabled
+  ✓ Visual Feedback: Added on-screen distance display
+  ✓ Enhanced Animation: More visible arm movements
+
+Components Added:
+  ✓ HandshakeDebugHelper (on DebugHelper GameObject)
+  ✓ Shows real-time distance
+  ✓ Shows status messages
+  ✓ Logs detailed debug info
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TIP: Keep the Console window open (Window → General → Console) to see
+        detailed messages about what's happening!
+
+🎉 The handshake system is now fully debugged with visual feedback!

@@ -1,0 +1,110 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                  AVATAR ANIMATION SYSTEM - QUICK START                    ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+🎮 READY TO PLAY! Your avatars are fully animated and interactive!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                            HOW TO USE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ENTER PLAY MODE
+   Click the Play button ▶️ at the top of Unity Editor
+
+2. WALK
+   Hold W key → Avatar walks forward with:
+   ✓ Realistic leg movement
+   ✓ Swinging arms
+   ✓ Body bounce
+   ✓ Knee bending
+
+3. ROTATE
+   ← Left Arrow  : Turn left
+   → Right Arrow : Turn right
+
+4. HANDSHAKE
+   ① Move avatars close together (using W and arrows)
+   ② When they're near each other (within arm's reach)
+   ③ Press H key
+   ④ Watch them shake hands with realistic arm movements!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        WHAT YOU'LL SEE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IDLE STATE:
+  - Subtle breathing animation
+  - Avatar stands naturally
+
+WALKING:
+  - Left leg swings forward → Right leg swings forward
+  - Arms swing opposite to legs (realistic walking)
+  - Knees bend with each step
+  - Slight body bounce with each step
+  - Smooth, natural movement
+
+HANDSHAKE:
+  - Right arm raises up
+  - Elbow bends to handshake position
+  - Hand shakes up and down
+  - Lasts for 3 seconds
+  - Smoothly returns to idle
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                         KEY FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 100% Procedural Animation - No animation files needed!
+✅ Automatic Bone Detection - Works right out of the box
+✅ Realistic Movement - Natural-looking walk cycles
+✅ Interactive Handshake - Both avatars animate together
+✅ Room Boundaries - Avatars stay inside the room
+✅ Smooth Transitions - Clean switches between states
+✅ Zero Console Errors - Everything working perfectly
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                      TECHNICAL DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Components on Each Avatar:
+  1. AvatarController      → Handles input and movement
+  2. ProceduralAnimator    → Creates realistic body animations
+  3. Animator              → Ready for additional animations if needed
+
+How It Works:
+  - ProceduralAnimator finds all bones automatically at start
+  - Uses sine waves and curves for natural movement
+  - Synchronizes all body parts for realistic motion
+  - No animation clips needed - all calculated in real-time!
+
+Performance:
+  - Lightweight and efficient
+  - No heavy animation files
+  - Runs smoothly on all platforms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                    CUSTOMIZATION OPTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In the Inspector, you can adjust:
+
+AvatarController Settings:
+  • Walk Speed           → How fast avatar moves
+  • Rotation Speed       → How fast avatar turns
+  • Handshake Distance   → How close avatars need to be
+  • Boundary Min/Max     → Room size constraints
+
+ProceduralAnimator Settings:
+  • Walk Cycle Speed     → Speed of walk animation
+  • Leg Swing Angle      → How far legs swing
+  • Arm Swing Angle      → How far arms swing
+  • Body Bounce Amount   → Vertical movement while walking
+  • Knee Angle           → How much knees bend
+  • Handshake Settings   → Speed and intensity of handshake
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TIP: Try adjusting the animation settings in the Inspector while in
+        Play Mode to see changes in real-time!
+
+🎉 ENJOY YOUR FULLY ANIMATED AVATARS!

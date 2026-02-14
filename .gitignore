@@ -1,0 +1,27 @@
+# Unity folders
+Library/
+Temp/
+Logs/
+UserSettings/
+
+# Build results
+[Bb]uild/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+*.csproj
+*.sln
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Large binary files
+*.fbx
+*.mb
+*.mp4
+*.mov
+*.exe
